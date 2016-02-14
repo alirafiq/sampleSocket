@@ -7,9 +7,6 @@ var HOST = process.env.OPENSHIFT_NODEJS_IP;
 var PORT =  process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
 
-// Create a server instance, and chain the listen function to it
-// The function passed to net.createServer() becomes the event handler for the 'connection' event
-// The sock object the callback function receives UNIQUE for each connection
 net.createServer(function(sock) {
     
     // We have a connection - a socket object is assigned to the connection automatically

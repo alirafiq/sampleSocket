@@ -1,10 +1,9 @@
 var net = require('net');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://localhost/eobd');
 var logs = mongoose.model('log', { logs: String ,dated:Number});
 
-var HOST = process.env.OPENSHIFT_NODEJS_IP;
-var PORT =  process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var PORT =   2419;
 
 
 net.createServer(function(sock) {
@@ -29,6 +28,6 @@ log.save(function (err) {
         console.log('CLOSED: ' + sock.remoteAddress +' '+ sock.remotePort);
     });
     
-}).listen(PORT, HOST);
+}).listen(PORT);
 
 console.log('Server listening on ' + HOST +':'+ PORT);

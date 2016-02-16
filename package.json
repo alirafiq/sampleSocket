@@ -7,12 +7,10 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "socket.io": "2.3.3",
-    "net": "2.3.3",
-    "mongoose": "2.3.3",
-    "request": "2.3.3",
-    "ejs": "2.3.3",
-    "express": "4.13.3"
+    "socket.io": "*",
+    "net": "*",
+    "mongoose": "*",
+    "request": "*"
   },
   "engines": {
     "node": "0.12.7"
